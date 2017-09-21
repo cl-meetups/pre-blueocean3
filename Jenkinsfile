@@ -15,7 +15,7 @@ pipeline {
           },
           "Sleep": {
             sleep 10
-            sh 'vaidarerro'
+            sh 'uname -a'
             
           }
         )
