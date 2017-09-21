@@ -6,5 +6,24 @@ pipeline {
         echo 'Hello World'
       }
     }
+    stage('Data') {
+      steps {
+        parallel(
+          "Data": {
+            sh 'date'
+            
+          },
+          "Sleep": {
+            sleep 10
+            
+          }
+        )
+      }
+    }
+    stage('Finalizar') {
+      steps {
+        echo 'Terminei'
+      }
+    }
   }
 }
