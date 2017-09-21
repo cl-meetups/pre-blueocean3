@@ -15,6 +15,7 @@ pipeline {
           },
           "Sleep": {
             sleep 10
+            sh 'vaidarerro'
             
           }
         )
